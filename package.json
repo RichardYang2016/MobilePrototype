@@ -1,0 +1,20 @@
+{
+  "name": "mksapp",
+  "version": "0.0.1",
+  "description": "MKS Demo App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "body-parser": "^1.17.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.0",
+    "memory-fs": "^0.4.1",
+    "morgan": "^1.8.1",
+    "node-uuid": "^1.4.7"
+  }
+}

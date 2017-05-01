@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-block">
+
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{wipDetail.SupplierName}}</h5>
+            <p>{{wipDetail.Value}} <small>{{wipDetail.Currency}}</small></p>
+        </div>
+        <small>{{wipDetail.CreatedByName}}</small>
+        <p>
+            Next Agents: N/A
+        </p>
+
+        <hr/>
+        <p>PO Number: {{wipDetail.PoNumber}}</p>
+        <p>Cost Center: {{wipDetail.CostCentreDescription}} - {{wipDetail.CostCentre}}</p>
+        <p>GL Account: {{wipDetail.GlAccountDescription}} - {{wipDetail.GlAccountNumber}}</p>
+
+        <p>Plant: {{wipDetail.PlantName}}</p>
+        <p>Payment Terms: {{wipDetail.PaymentTermDescription}}</p>
+
+    </div>
+</div>
+
+<div class="card">
+    <div class="list-group" ng-init="initPODetail()">
+        <div ng-repeat="item in wipDetail.items">
+            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{item.Description}}</h5>
+                    <p>{{item.Value}} <small>{{item.Currency}}</small></p>
+                </div>
+                <p class="mb-1">{{item.PoNumberFormatted}}</p>
+                <small>{{item.ItemNumberFormatted}}</small>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+
+<div class="app-footer">
+    <div class="btn-group pull-right footer-btn" role="group" >
+        <button class="btn btn-primary ">
+            Approve
+        </button>
+        <button class="btn btn-danger ">
+        Reject
+    </button>
+    </div>
+</div>

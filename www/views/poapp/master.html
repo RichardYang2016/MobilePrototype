@@ -1,0 +1,13 @@
+<div class="list-group" ng-init="initPOApp()">
+  <div ng-repeat="item in poAppList">
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" ng-click="navToDetail($index)">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{item.SupplierName}}</h5>
+        <p>{{item.Value}} <small>{{item.Currency}}</small></p> 
+        
+      </div>
+      <p class="mb-1">{{item.ItemDescriptions}}</p>
+      <small>{{item.CreatedByName}}</small>
+    </a>
+  </div>
+</div>

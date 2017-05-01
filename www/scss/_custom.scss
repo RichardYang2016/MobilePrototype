@@ -1,0 +1,40 @@
+// Here you can add other styles
+.home-tile {
+    position: relative;
+    max-width: 200px;
+}
+
+.home-tile:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    /* initial ratio of 1:1*/
+}
+.app-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;   
+    background-color:#9cafae;
+}
+
+.footer-btn{
+    top: 6px;  
+}
+.title-content {
+    padding: 1rem !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    span {
+        padding: 1rem !important;
+        position: absolute;
+        bottom: 0;
+        left: 0;        
+    }
+}
+
+.tile-icon {
+    font-size: 45px !important;
+}
