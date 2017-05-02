@@ -1,9 +1,9 @@
 var config = require('../../config/config')
 
-module.exports = function getPOCounts(req, res, next) {
+module.exports = function getPODetail(req, res, next) {
 
     var userId = '37730' // should get from request. should be token instead of user name.  
-    // count is used based. 
+    let poId = req.params.id
     let items = [{
 
         "ItemNumber": "00010",
@@ -126,6 +126,33 @@ module.exports = function getPOCounts(req, res, next) {
         items: items
     }
 
+    let items2 = [{
 
-    res.status(200).send(JSON.stringify(poDetail))
+        "ItemNumberFormatted": "1-1",
+        "PoNumberFormatted": "A431221",
+        "Description": "Legal Fee",
+        "Value": "1415.27",
+        "Currency": "USD"
+
+    }]
+    let poDetail2 = {
+        "Value": '1415.27',
+        "Currency": 'USD',
+        "CreatedByName": 'RYANG',
+        "GlAccountNumber": "ORA1001",
+        "GlAccountDescription": "Legal fees - general",
+        "CostCentre": "ORA_1000",
+        "CostCentreDescription": "Andover Office Administration",
+        "PoNumber": "A431221",
+        "PaymentTermDescription": "NET 30 DAYS",
+        "SupplierName": "Tafapolsky & Smith LLP",
+        "PlantName": "MKS Andover",
+        items: items2
+    }
+    if (poId === 'A431221') {
+        res.status(200).send(JSON.stringify(poDetail2))
+    } else {
+        res.status(200).send(JSON.stringify(poDetail))
+    }
+
 }
